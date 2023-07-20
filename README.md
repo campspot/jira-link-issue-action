@@ -1,7 +1,7 @@
 # jira-link-issue-action [![MIT License][shield-license]][license] [![codecov][shield-codecov]][codecov]
 
 [GitHub action](https://github.com/features/actions) for linking
-[JIRA](https://www.atlassian.com/software/jira) issues as a comment.
+[Jira](https://www.atlassian.com/software/jira) issues as a comment.
 
 ## Usage
 
