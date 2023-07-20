@@ -1,8 +1,8 @@
 # GitHub Action
 # https://help.github.com/en/actions/automating-your-workflow-with-github-actions/metadata-syntax-for-github-actions
 
-name: 'JIRA Link Issue'
-description: 'Link JIRA issues as a comment'
+name: 'Jira Link Issue'
+description: 'Link Jira issues as a comment'
 
 branding:
   icon: message-circle
@@ -11,10 +11,6 @@ branding:
 inputs:
   atlassian-domain:
     description: 'The domain of your Atlassian app'
-    required: true
-
-  board-name:
-    description: 'The JIRA board name'
     required: true
 
   github-token:

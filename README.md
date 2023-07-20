@@ -6,8 +6,6 @@
 ## Usage
 
 ```yaml
-name: Try GitHub Action
-
 on:
   pull_request:
     types: [opened]
@@ -18,10 +16,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Link Jira Issue
-        uses: john-d-pelingo/jira-link-issue-action@v1
+        uses: johnmarriott/jira-link-issue-action@v1
         with:
-          atlassian-domain: 'https://johndpelingo.atlassian.net'
-          board-name: 'MEME'
+          atlassian-domain: 'https://jira.atlassian.net'
           github-token: ${{ secrets.GITHUB_TOKEN }}
 ```
 
@@ -30,7 +27,6 @@ jobs:
 | Name               | Type   | Required? | Description                      |
 | ------------------ | ------ | --------- | -------------------------------- |
 | `atlassian-domain` | string | yes       | The domain of your Atlassian app |
-| `board-name`       | string | yes       | The JIRA board name              |
 | `github-token`     | string | yes       | The GitHub token for API access  |
 
 ## Notes
@@ -40,11 +36,4 @@ jobs:
 
 ## License
 
-[MIT][license] &copy; [John Darryl Pelingo][me]
-
-[codecov]: https://codecov.io/gh/john-d-pelingo/jira-link-issue-action
-[license]: LICENSE
-[me]: https://johndpelingo.com/
-[shield-codecov]:
-  https://codecov.io/gh/john-d-pelingo/jira-link-issue-action/branch/master/graph/badge.svg?token=VNPWLKP8MG
-[shield-license]: https://img.shields.io/badge/License-MIT-lavender.svg
+[MIT][license]

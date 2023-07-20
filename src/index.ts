@@ -3,7 +3,6 @@ import { context, getOctokit } from '@actions/github'
 
 const getInputs = (): {
   atlassianDomain: string
-  boardName: string
   branchName: string
   githubToken: string
 } => {
@@ -21,20 +20,17 @@ const getInputs = (): {
 
   return {
     atlassianDomain: getInput('atlassian-domain'),
-    boardName: getInput('board-name'),
     branchName,
     githubToken,
   }
 }
 
 const getIssueId = ({
-  boardName,
   branchName,
 }: {
-  boardName: string
   branchName: string
 }): string | undefined => {
-  const regex = new RegExp(`${boardName}-\\d+`, 'gi')
+  const regex = new RegExp(`^[A-Z,a-z]{2,}-\d{1,}`, 'gi')
 
   const result = regex.exec(branchName)
 
@@ -83,9 +79,8 @@ const getCommentArguments = ({
 
 export const main = async (): Promise<void> => {
   try {
-    const { atlassianDomain, boardName, branchName, githubToken } = getInputs()
+    const { atlassianDomain, branchName, githubToken } = getInputs()
     const issueId = getIssueId({
-      boardName,
       branchName,
     })
 
