@@ -34,6 +34,12 @@ jobs:
 - This action works with pull requests only as it requires the branch name to
   determine the issue ID.
 
+## Setup + build
+
+`npm install`
+`tsc src/index.ts`
+
+
 ## License
 
 [MIT](LICENSE)
