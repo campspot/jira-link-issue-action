@@ -70,7 +70,7 @@ const getCommentArguments = ({
   const [owner, repo] = repository.full_name.split('/')
 
   return {
-    body: `JIRA issue: ${atlassianDomain}/browse/${issueId}`,
+    body: `Jira issue: ${atlassianDomain}/browse/${issueId}`,
     issueNumber,
     owner,
     repo,
