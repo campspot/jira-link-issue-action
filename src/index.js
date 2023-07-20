@@ -75,7 +75,7 @@ var getCommentArguments = function (_a) {
     }
     var _c = repository.full_name.split('/'), owner = _c[0], repo = _c[1];
     return {
-        body: "Jira issue: ".concat(atlassianDomain, "/browse/").concat(issueId),
+        body: "".concat(atlassianDomain, "/browse/").concat(issueId),
         issueNumber: issueNumber,
         owner: owner,
         repo: repo

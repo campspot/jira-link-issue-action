@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Link Jira Issue
-        uses: johnmarriott/jira-link-issue-action@v1.0.4
+        uses: johnmarriott/jira-link-issue-action@v1.0.5
         with:
           atlassian-domain: 'https://jira.atlassian.net'
           github-token: ${{ secrets.GITHUB_TOKEN }}
