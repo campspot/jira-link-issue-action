@@ -56,7 +56,7 @@ var getInputs = function () {
 };
 var getIssueId = function (_a) {
     var branchName = _a.branchName;
-    var regex = new RegExp("^[A-Z,a-z]{2,}-d{1,}", 'gi');
+    var regex = new RegExp("^[A-Z,a-z]{2,}-\\d{1,}");
     var result = regex.exec(branchName);
     if (!result) {
         return undefined;

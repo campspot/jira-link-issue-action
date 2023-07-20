@@ -30,7 +30,7 @@ const getIssueId = ({
 }: {
   branchName: string
 }): string | undefined => {
-  const regex = new RegExp(`^[A-Z,a-z]{2,}-\d{1,}`, 'gi')
+  const regex = new RegExp(`^[A-Z,a-z]{2,}-\\d{1,}`)
 
   const result = regex.exec(branchName)
 
