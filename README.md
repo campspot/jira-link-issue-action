@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Link Jira Issue
-        uses: johnmarriott/jira-link-issue-action@v1.0.5
+        uses: campspot/jira-link-issue-action@v1.0.0
         with:
           atlassian-domain: 'https://jira.atlassian.net'
           github-token: ${{ secrets.GITHUB_TOKEN }}
@@ -37,6 +37,7 @@ jobs:
 ## Setup + build
 
 `npm install`
+
 `tsc src/index.ts`
 
 
